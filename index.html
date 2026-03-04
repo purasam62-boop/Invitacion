@@ -8,178 +8,161 @@
 
 <style>
 
-/* ===== RESET GENERAL ===== */
+/* ===== RESET ===== */
 * {
     box-sizing: border-box;
 }
 
-/* ===== FONDO GENERAL ===== */
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
-
     background: url('exterior.jpg') no-repeat center center;
     background-size: cover;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 15px;
+    padding: 20px 10px;
 }
 
-/* ===== TARJETA ===== */
+/* ===== TARJETA (DISEÑADA PARA TELEFONO) ===== */
 .tarjeta {
     background: url('exterior_t.jpg') center/cover no-repeat;
     background-color: #f4efe6;
 
     width: 100%;
-    max-width: 750px;
+    max-width: 420px;   /* 🔥 tamaño real de teléfono */
+    margin: auto;
 
-    padding: 70px 60px;
-    border-radius: 20px;
+    padding: 40px 25px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-/* ===== ENCABEZADO ===== */
+/* ===== TEXTOS TELEFONO ===== */
+
 .encabezado {
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: 12px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #8a7a5a;
     margin-bottom: 15px;
 }
 
-/* ===== TITULO ===== */
 .titulo {
     font-family: 'Great Vibes', cursive;
-    font-size: 80px;
+    font-size: 48px;
 
     background: linear-gradient(45deg, #6b5c29, #eed264, #936a02);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-/* ===== TEXTOS ===== */
 .texto {
-    font-size: 20px;
-    line-height: 1.8;
-    margin: 18px 0;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 15px 0;
     color: #5c4632;
 }
 
-/* ===== NOMBRES ===== */
 .nombres {
     font-family: 'Great Vibes', cursive;
-    font-size: 70px;
+    font-size: 42px;
     color: #7a4e2d;
-    margin: 30px 0;
+    margin: 25px 0;
     line-height: 1.2;
 }
 
-/* ===== PADRINOS ===== */
 .padrinos {
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 600;
-    margin: 20px 0;
+    margin: 18px 0;
 }
 
-/* ===== FECHA ===== */
 .fecha {
-    font-size: 40px;
-    margin: 40px 0 30px 0;
+    font-size: 22px;
+    margin: 30px 0 25px 0;
 }
 
-/* ===== DETALLES ===== */
+/* ===== DETALLES TELEFONO ===== */
 .detalles {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 18px;
-    gap: 20px;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 15px;
 }
 
 .columna {
-    width: 48%;
+    width: 100%;
 }
 
-/* ===== BOTONES ===== */
 .link-box {
     display: inline-block;
-    margin-top: 12px;
-    padding: 10px 22px;
+    margin-top: 10px;
+    padding: 8px 18px;
     border: 1px solid #b08d57;
     border-radius: 25px;
     text-decoration: none;
     color: #7a4e2d;
-    font-size: 14px;
-    transition: 0.3s ease;
+    font-size: 13px;
 }
 
-.link-box:hover {
-    background: #b08d57;
-    color: white;
-}
-
-/* ===== FINAL ===== */
 .final {
     font-family: 'Great Vibes', cursive;
-    font-size: 38px;
-    margin-top: 50px;
+    font-size: 28px;
+    margin-top: 40px;
 }
 
 /* ========================= */
-/* ===== VERSION MOVIL ===== */
+/* ===== VERSION LAPTOP ===== */
 /* ========================= */
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
 
     body {
-        align-items: flex-start;
-        padding: 30px 10px;
-        background-attachment: scroll; /* 🔥 mejora en iPhone */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px;
     }
 
     .tarjeta {
-        padding: 45px 25px;
-        border-radius: 15px;
+        max-width: 750px;
+        padding: 70px 60px;
     }
 
     .titulo {
-        font-size: 48px;
+        font-size: 80px;
     }
 
     .nombres {
-        font-size: 42px;
+        font-size: 70px;
     }
 
     .texto {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .padrinos {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .fecha {
-        font-size: 26px;
+        font-size: 40px;
     }
 
     .detalles {
-        flex-direction: column;
-        gap: 30px;
-        font-size: 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 18px;
     }
 
     .columna {
-        width: 100%;
+        width: 48%;
     }
 
     .final {
-        font-size: 30px;
+        font-size: 38px;
     }
 }
 
@@ -244,4 +227,5 @@ San Antonio Xonacatlán<br>
 
 </body>
 </html>
+
 
