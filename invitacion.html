@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Boda</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== FONDO GENERAL (EXTERNO) ===== */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+
+    background: url('exterior.jpg') no-repeat center center fixed;
+    background-size: cover;   /* 🔥 Cubre toda la pantalla */
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   /* 🔥 Solo lo necesario */
+}
+
+/* ===== TARJETA PRINCIPAL ===== */
+.tarjeta {
+    background: url('exterior_t.jpg') center/cover no-repeat;
+    background-color: #f4efe6;
+    max-width: 750px; /* MÁS PEQUEÑA */
+    width: 85%;
+    padding: 60px 50px; /* MENOS ESPACIO INTERNO */
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    transform: scale(0.95); /* LIGERAMENTE MÁS CHICA */
+}
+
+/* ===== ENCABEZADO PEQUEÑO ===== */
+.encabezado {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8a7a5a;
+    margin-bottom: 15px;
+}
+
+.titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 85px; /* Más grande */
+    
+    background: linear-gradient(45deg, #6b5c29, #eed264, #936a02);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.texto {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 18px 0;
+    color: #5c4632;
+}
+
+.nombres {
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    color: #7a4e2d;
+    margin: 30px 0;
+    line-height: 1.2;
+}
+
+.padrinos {
+    font-size: 26px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.fecha {
+    font-size: 42px;
+    margin: 40px 0 30px 0;
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.columna {
+    width: 48%;
+}
+
+/* ===== RECUADROS PARA VÍNCULOS ===== */
+.link-box {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    border: 1px solid #b08d57;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #7a4e2d;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.link-box:hover {
+    background: #b08d57;
+    color: white;
+}
+
+.final {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .tarjeta { padding: 50px 30px; }
+    .detalles { flex-direction: column; }
+    .columna { width: 100%; }
+    .nombres { font-size: 55px; }
+    .titulo { font-size: 48px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="tarjeta">
+
+<div class="encabezado">Con la bendición de Dios y nuestros padres</div>
+
+<div class="titulo">Nuestra Boda</div>
+
+<div class="texto">
+Dios juntó nuestras manos y nos señaló el camino, nosotros uniremos nuestras vidas y la recorreremos con amor y fe.
+</div>
+
+<div class="nombres">
+María del Refugio<br>
+y José Manuel
+</div>
+
+<div class="texto">
+Motivados por el amor que nos tenemos y con la bendición de nuestros padrinos:
+</div>
+
+<div class="padrinos">
+Eduardo <br>
+y<br>
+señora :P
+</div>
+
+<div class="texto">
+Presentaremos nuestro amor ante Dios y deseamos compartir la alegría de nuestra unión en matrimonio con nuestros seres queridos.
+</div>
+
+<div class="fecha">4 de julio del 2026</div>
+
+<div class="detalles">
+
+<div class="columna">
+<strong>Ceremonia</strong><br>
+Iglesia de Xonacatlán<br>
+1:00 P.M.<br>
+<a href="https://maps.app.goo.gl/H4B3c9DwPRHyewaT9" class="link-box">Ver ubicación</a>
+</div>
+
+<div class="columna">
+<strong>Recepción</strong><br>
+Nueva Era,<br>
+San Antonio Xonacatlán<br>
+(Casa de los novios)<br>
+<a href="https://maps.app.goo.gl/6omhXtrZjw89ziWBA" class="link-box">Ver ubicación</a>
+</div>
+
+</div>
+
+<div class="final">¡Te esperamos!</div>
+
+</div>
+
+</body>
+</html>
