@@ -8,86 +8,87 @@
 
 <style>
 
-/* ===== FONDO GENERAL (EXTERNO) ===== */
 body {
     margin: 0;
     font-family: 'Playfair Display', serif;
 
     background: url('exterior.jpg') no-repeat center center fixed;
-    background-size: cover;   /* 🔥 Cubre toda la pantalla */
-    background-position: center;
+    background-size: cover;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;   /* 🔥 Solo lo necesario */
+    min-height: 100vh;
+    padding: 20px 0;
 }
 
 /* ===== TARJETA PRINCIPAL ===== */
 .tarjeta {
     background: url('exterior_t.jpg') center/cover no-repeat;
     background-color: #f4efe6;
-    max-width: 750px; /* MÁS PEQUEÑA */
-    width: 85%;
-    padding: 60px 50px; /* MENOS ESPACIO INTERNO */
+    max-width: 750px;
+    width: 90%;
+    padding: 60px 50px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-    transform: scale(0.95); /* LIGERAMENTE MÁS CHICA */
 }
 
-/* ===== ENCABEZADO PEQUEÑO ===== */
+/* ===== ENCABEZADO ===== */
 .encabezado {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #8a7a5a;
     margin-bottom: 15px;
 }
 
+/* ===== TITULO ===== */
 .titulo {
     font-family: 'Great Vibes', cursive;
-    font-size: 85px; /* Más grande */
-    
+    font-size: clamp(40px, 6vw, 85px);
     background: linear-gradient(45deg, #6b5c29, #eed264, #936a02);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    text-align: center;
     margin-bottom: 25px;
 }
 
+/* ===== TEXTO GENERAL ===== */
 .texto {
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     line-height: 1.8;
     margin: 18px 0;
     color: #5c4632;
 }
 
+/* ===== NOMBRES ===== */
 .nombres {
     font-family: 'Great Vibes', cursive;
-    font-size: 75px;
+    font-size: clamp(38px, 5vw, 75px);
     color: #7a4e2d;
     margin: 30px 0;
     line-height: 1.2;
 }
 
+/* ===== PADRINOS ===== */
 .padrinos {
-    font-size: 26px;
+    font-size: clamp(18px, 3vw, 26px);
     font-weight: 600;
     margin: 20px 0;
 }
 
+/* ===== FECHA ===== */
 .fecha {
-    font-size: 42px;
+    font-size: clamp(24px, 3vw, 42px);
     margin: 40px 0 30px 0;
 }
 
+/* ===== DETALLES ===== */
 .detalles {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     gap: 20px;
 }
 
@@ -95,16 +96,16 @@ body {
     width: 48%;
 }
 
-/* ===== RECUADROS PARA VÍNCULOS ===== */
+/* ===== BOTONES ===== */
 .link-box {
     display: inline-block;
     margin-top: 10px;
-    padding: 8px 18px;
+    padding: 10px 20px;
     border: 1px solid #b08d57;
     border-radius: 25px;
     text-decoration: none;
     color: #7a4e2d;
-    font-size: 15px;
+    font-size: 14px;
     transition: 0.3s ease;
 }
 
@@ -113,18 +114,33 @@ body {
     color: white;
 }
 
+/* ===== FINAL ===== */
 .final {
     font-family: 'Great Vibes', cursive;
-    font-size: 40px;
+    font-size: clamp(28px, 4vw, 40px);
     margin-top: 50px;
 }
 
+/* ===== RESPONSIVE MOVIL ===== */
 @media (max-width: 768px) {
-    .tarjeta { padding: 50px 30px; }
-    .detalles { flex-direction: column; }
-    .columna { width: 100%; }
-    .nombres { font-size: 55px; }
-    .titulo { font-size: 48px; }
+
+    body {
+        align-items: flex-start;
+    }
+
+    .tarjeta {
+        width: 95%;
+        padding: 40px 25px;
+    }
+
+    .detalles {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .columna {
+        width: 100%;
+    }
 }
 
 </style>
